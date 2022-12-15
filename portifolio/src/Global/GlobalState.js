@@ -1,10 +1,11 @@
 import { GlobalStateContext } from "./GlobalStateContext"
 
-export const GlobalState = () =>{
+export const GlobalState = (props) =>{
 
+    const data = []
     return(
-        <GlobalStateContext.Provider>
-            
+        <GlobalStateContext.Provider value={data}>
+            {props.children}
         </GlobalStateContext.Provider>
     )
 }
